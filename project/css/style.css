@@ -6,7 +6,11 @@ body{
 .header {
 	background: rgba(0, 170, 255);
 	height: 4em;
+	width: 100%;
+	position: fixed;
 }
+
+
 .logo{
     float:left;
     margin-left: 2.2em;
@@ -47,7 +51,7 @@ body{
 	background: rgb(12, 117, 121);
 }
 
-.container{
+.index-image{
 	background: url(../images/home.png) no-repeat 0px -100px;
 	background-size: 100%;
 	padding-top: 0.02px;
