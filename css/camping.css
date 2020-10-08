@@ -1,0 +1,432 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    border: 0px;
+    list-style: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header section article img {
+    width: 50px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.header{
+	background-color: rgb(133, 102, 0);
+	height: 4em;
+	margin: 0px;
+}
+.logo{
+    float:left;
+    margin-left: 2.2em;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
+}
+
+.logo p{
+    font-size: x-large;
+	margin-top: 0.5em ;
+	margin-left: 0.5em;
+	margin-bottom: 0;
+	color: white;
+}
+.top-nav{
+	float: right;
+	width: 40%;
+	margin-top: 0.6em;
+}
+.top-nav ul{
+	margin: 0.8em;
+	padding:0;
+}
+.top-nav ul li{
+	list-style-type:none;
+	display:inline-block;
+	padding: 0 0.5em;
+}
+.top-nav ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	color:white;
+	position: relative;
+	letter-spacing: 1px;
+	text-shadow: 0 0 2px rgba(255,255,255,0.3);
+	padding:10px;
+}
+.top-nav ul li a:hover{
+	background: rgb(12, 117, 121);
+}
+
+#banner1 {
+    height: 400px;
+}
+
+#banner1 p {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    left: 2em;
+    bottom: 6.2em;
+}
+
+header #front {
+    color: cornsilk;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    margin: 0, auto;
+    box-shadow: 5px 5px 10px #000000;
+}
+
+header #front:hover {
+    color: midnightblue;
+}
+
+#guidence {
+    padding-top: 40px;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 35px;  
+    background-color:rgb(11, 11, 78);
+    box-shadow: 0px 7px 12px rgb(125, 166, 197);
+    animation: 7s change forwards;
+}
+
+@keyframes change {
+    to {
+        text-shadow: 1px 1px 1px rgb(37, 37, 37);
+        color: rgb(199, 15, 15);
+        background-color: rgb(234, 235, 236);
+        box-shadow: 0px 7px 12px rgb(158, 156, 156);
+    }
+}
+
+#below {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 10px;
+    animation: 5s change-below forwards;
+}
+
+@keyframes change-below {
+    to {
+        color: rgb(17, 5, 36);
+    }
+} 
+
+.division {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+#forest img {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+}
+
+#forest #forest-text {
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+}
+
+#forest #forest-text ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#forest #forest-text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+}
+#forest h1 {
+    color: rgb(39, 189, 39);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#forest p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#forest #forest-text:hover {
+    animation: 2s change-forest forwards;
+}
+
+@keyframes change-forest {
+    to {
+        background-color:rgb(126, 70, 15);
+        box-shadow: 5px 5px 20px #4b4a4a;
+        color:cornsilk;
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+}
+
+#lake img {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+}
+
+#lake #lake-text{
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+}
+
+#lake #lake-text ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#lake #lake-text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+}
+
+#lake h1 {
+    color: cornflowerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#lake p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#lake #lake-text:hover {
+    animation: 2s change-lake forwards;
+}
+
+@keyframes change-lake {
+    to {
+        background-color: rgb(5, 90, 5);
+        box-shadow: 5px 5px 20px #4b4a4a;
+        color:cornsilk;
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+}
+
+#beach img {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+}
+
+#beach #beach-text{
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+}
+
+#beach #beach-text ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#beach #beach-text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+}
+
+#beach h1 {
+    color: rgb(247, 84, 20);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#beach p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#beach #beach-text:hover {
+    animation: 2s change-beach forwards;
+}
+
+@keyframes change-beach {
+    to {
+        background-color: rgb(7, 7, 107);
+        box-shadow: 5px 5px 20px #4b4a4a;
+        color:cornsilk;
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+}
+
+#mountain img {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+}
+
+#mountain #mountain-text{
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+}
+
+#mountain #mountain-text ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#mountain #mountain-text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+}
+
+#mountain h1 {
+    color: rgb(83, 81, 81);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#mountain p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#mountain #mountain-text:hover {
+    animation: 2s change-mountain forwards;
+}
+
+@keyframes change-mountain {
+    to {
+        background-color: rgb(182, 148, 36);
+        box-shadow: 5px 5px 20px #4b4a4a;
+        color:cornsilk;
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+}
+
+#desert img {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 350px;
+    float: left;
+    border-radius: 10px;
+}
+
+#desert #desert-text{
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#desert h1 {
+    color: sandybrown;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#desert p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#desert #desert-text ul {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+#desert #desert-text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+}
+
+#desert #desert-text:hover {
+    animation: 2s change-desert forwards;
+}
+
+@keyframes change-desert {
+    to {
+        background-color:rgb(70, 122, 122);
+        box-shadow: 5px 5px 20px #4b4a4a;
+        color:cornsilk;
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+}
+
+.Separator {
+    clear: both;
+}
+
+.footer{
+	background: rgb(133, 102, 0);
+	width:100%;
+	height: 280px;
+	overflow:hidden;
+}
+
+.footer-column, .footer-grid-address {
+	margin-top: 60px;
+}
+
+.footer-column{
+	float:left;
+	width:31%;
+	height:100%;
+	margin-right:2%;
+}
+.footer-column h6{
+	font-size: 1.5em;
+	color: white;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+.footer-column p{
+	font-size: 0.9em;
+	color:white;
+	line-height: 1.8em;
+	margin-left: 30px;
+}
+.footer-column ul li a{
+	text-decoration: none;
+	display:block;
+	padding:10px 0px;
+	border-bottom: 2px solid black;
+	font-size: 0.9em;
+	color:white;
+	transition: 0.5s ease;
+}
+.footer-column ul li a:hover{
+	color:green;
+}
+
+
+
