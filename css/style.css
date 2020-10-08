@@ -201,7 +201,8 @@ body{
 .footer-column ul li a:hover{
 	color:green;
 }
-* {
+/*equipment*/ 
+{
     padding: 0;
     margin: 0;
 }
