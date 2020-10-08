@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
     <title>Wild Queensland</title>
-    <link href="css/style.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
 </head>
 
 <body>
@@ -31,7 +33,61 @@
 				<h2><span>THE BEAUTY</span> that does not belong to<span> THE REAL WORLD</span></h2>
 			</header>
         </section>
-    </header>
+	</header>
+	<hr>
+	<section class="mapFunction">
+		<div class="search">
+			<img src="images/frogs-demo.jpeg" alt="frogs-demo" class="frog">
+			<div class="search-bar">
+				<input type="text" name="Animal name" placeholder="Filter by text" class="flex">
+				<input type="submit" value="search">
+			</div>
+			<div class="species">
+				<img src="https://img.icons8.com/plasticine/100/000000/frog-face.png"/><p>Amphibians</p>
+			</div>
+			<div class="species">
+				<img src="https://img.icons8.com/plasticine/100/000000/horse.png"/><p>Mammals</p>
+			</div>
+			<div class="species">
+				<img src="https://img.icons8.com/plasticine/100/000000/bird.png"/><p>Birds</p>
+			</div>
+		</div>
+		<div id="map">
+
+		</div>
+	</section>
+	<script>
+		var map = L.map('map').setView([-22.889674, 144.299873], 5);
+
+		L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0', {
+			attribution: 'https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+			tileSize: 512,
+			zoomOffset: -1,
+			accessToken: 'your.mapbox.access.token'
+		}).addTo(map)
+
+		var marker = L.marker([-22.889674, 144.299873]).addTo(map);
+		
+		var myIcon = L.icon({
+			iconUrl: 'koala.png',
+			iconSize: [38, 38],
+		});
+
+		L.marker([-20.833, 136.583], {icon: myIcon}).addTo(map);
+		// myIcon.bindPopup("I am a popup.");
+
+		marker.bindPopup("<img src='koala.png'><br>I am a popup.");
+
+		// 独立标签
+		// var popup = L.popup()
+		// .setLatLng([-25.833, 136.583])
+		// .setContent("I am a standalone popup.")
+		// .openOn(map);
+
+	</script>
+	<hr>
 
 
     <footer class="footer">
@@ -57,6 +113,9 @@
 			</article>			
 		</section>
 	</footer>
+
+	<script src="js/script.js"></script>
+	
 </body>
 </html>
 
