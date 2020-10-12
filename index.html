@@ -57,7 +57,7 @@
 		</div>
 	</section>
 	<script>
-		var map = L.map('map').setView([-22.889674, 144.299873], 5);
+		var map = L.map('map').setView([-22.889674, 135.299873], 5);
 
 		L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0', {
 			attribution: 'https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0',
@@ -68,19 +68,71 @@
 			accessToken: 'your.mapbox.access.token'
 		}).addTo(map)
 
-		var marker = L.marker([-22.889674, 144.299873]).addTo(map);
+		// var marker1 = L.marker([-22.889674, 144.299873]).addTo(map);
+		//  	marker2 = L.marker([-19.779545, 147.595547]).addTo(map);
+		//  	marker3 = L.marker([-22.779545, 149.595547]).addTo(map);
+		//  	marker4 = L.marker([-28.779545, 120.595547]).addTo(map);
+		//  	marker5 = L.marker([-24.779545, 125.595547]).addTo(map);
+		//  	marker6 = L.marker([-14.779545, 125.595547]).addTo(map);
 		
-		var myIcon = L.icon({
-			iconUrl: 'koala.png',
-			iconSize: [38, 38],
+		// marker1.bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+
+		var Frogs = L.Icon.extend({
+			options: {
+				iconSize: [45, 45],
+			}
 		});
 
-		L.marker([-20.833, 136.583], {icon: myIcon}).addTo(map);
-		// myIcon.bindPopup("I am a popup.");
+		var frogIcon = new Frogs({iconUrl: 'images/frog.png'});
 
-		marker.bindPopup("<img src='koala.png'><br>I am a popup.");
+		L.icon = function (options) {
+			return new L.Icon(options);
+		};
 
-		// 独立标签
+		L.marker([-22.889674, 144.299873], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+		L.marker([-19.779545, 147.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+		L.marker([-22.779545, 149.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+		L.marker([-28.779545, 120.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+		L.marker([-24.779545, 125.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+		L.marker([-14.779554, 125.595797], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
+
+		// L.marker([-22.889674, 144.299873], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+
+		// L.marker([-19.779545, 147.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+
+		// L.marker([-22.779545, 149.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+
+		// L.marker([-28.779545, 120.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+
+		// L.marker([-24.779545, 125.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+
+		// L.marker([-14.779554, 125.595797], {icon: frogIcon}).addTo(map).on('click', function(e){
+    	// 	map.setView(e.latlng, 10);
+		// });
+		
+		// set flags to the map to help user mark the location
+		var Flags = L.Icon.extend({
+			options: {
+				iconSize: [45, 45],
+			}
+		});
+
+		var flagIcon = new Flags({iconUrl: 'images/flag.png'});
+
+		map.on('click', function(e) {
+    		var marker = new L.marker(e.latlng, {icon: flagIcon}).addTo(map);
+		});
+		
 		// var popup = L.popup()
 		// .setLatLng([-25.833, 136.583])
 		// .setContent("I am a standalone popup.")
