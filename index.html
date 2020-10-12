@@ -68,6 +68,22 @@
 			accessToken: 'your.mapbox.access.token'
 		}).addTo(map)
 
+		L.Control.Watermark = L.Control.extend({
+			onAdd: function(map) {
+				var img = L.DomUtil.create('img');
+				img.src = 'images/logo.png';
+				img.style.width = '110px';
+				return img;
+			},
+			onRemove: function(map) {},
+		});
+
+		L.control.Watermark = function(opts) {
+			return new L.Control.Watermark(opts);
+		}
+
+		L.control.Watermark().addTo(map);
+
 		// var marker1 = L.marker([-22.889674, 144.299873]).addTo(map);
 		//  	marker2 = L.marker([-19.779545, 147.595547]).addTo(map);
 		//  	marker3 = L.marker([-22.779545, 149.595547]).addTo(map);
@@ -140,7 +156,6 @@
 
 	</script>
 	<hr>
-
 
     <footer class="footer">
 		<section class="footer-columns">
