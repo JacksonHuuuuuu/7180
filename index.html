@@ -1,188 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
-    <title>Wild Queensland</title>
-	<link href="css/style.css" rel="stylesheet">
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+		<title>Wild Queensland</title>
+		<link href="css/style.css" rel="stylesheet">
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
 
-<body>
-    <header class="banner" id="banner">
-    	<section class="header">
-			<article class="container">
-				<section class="logo">
-                	<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
-                	<p>Wild Queensland</p>
-				</section>
-				<nav class="top-nav">
-					<ul class="nav">
-                   		<li><a href="index.html">HOME</a></li>	
-				<li><a href="equipment.html">EQUIPMENTS</a></li>
-                    	    <li><a href="camping.html">CAMPING</a></li>
-						<li><a href="seasons.html">GUIDANCE</a></li>
+	<body>
+		<header class="banner" id="banner">
+			<section class="header">
+				<article class="container">
+					<section class="logo">
+						<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+						<p>Wild Queensland</p>
+					</section>
+					<nav class="top-nav">
+						<ul class="nav">
+							<li><a href="index.html">HOME</a></li>	
+					<li><a href="equipment.html">EQUIPMENTS</a></li>
+								<li><a href="camping.html">CAMPING</a></li>
+							<li><a href="seasons.html">GUIDANCE</a></li>
+						</ul>
+					</nav>
+				</article>	
+			</section>   
+			<section class="container">
+				<header class="banner-title"> 
+					<h1>Wild Queensland</h1>
+					<h2><span>THE BEAUTY</span> that does not belong to<span> THE REAL WORLD</span></h2>
+				</header>
+			</section>
+		</header>
+		<hr>
+		<section class="mapFunction">
+			<div class="search">
+				<img src="images/cover.png" alt="" class="cover"">
+				<!-- <h2 id="search-title">Find the mammals!</h1> -->
+				<div id="search-bar">
+					<input id="filter-text" type="text" name="Animal name" placeholder="Search keywords provided on the right" class="flex">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- <input type="submit" value="search"> -->
+					<select id="mammals-list">
+						<option value ="Balaenidae">Balaenidae: 990410</option>
+						<option value ="Balaenopteridae">Balaenopteridae: 990430</option>
+						<option value="Bovidae">Bovidae: 990390</option>
+						<option value="Camelidae">Camelidae: 990380</option>
+						<option value="Canidae">Canidae: 990330</option>
+						<option value="Cervidae">Cervidae: 990400</option>
+						<option value="Cricetidae">Cricetidae: 990294</option>
+						<option value="Dugongidae">Dugongidae: 990300</option>
+						<option value="Equidae">Equidae: 990360</option>
+						<option value="Felidae">Felidae: 990340</option>
+						<option value="Herpestidae">Herpestidae: 990334</option>
+						<option value="Leporidae">Leporidae: 990350</option>
+						<option value="Miniopteridae">Miniopteridae: 990270</option>
+						<option value="Muridae">Muridae: 990290</option>
+						<option value="Mustelidae">Mustelidae: 990332</option>
+						<option value="Otariidae">Otariidae: 990310</option>
+						<option value="Phocidae">Phocidae: 990320</option>
+						<option value="Sciuridae">Sciuridae: 990292</option>
+						<option value="Suidae">Suidae: 990370</option>
+						<option value="Vespertilionidae">Vespertilionidae: 990280</option>
+					</select>
+				</div>
+				<p id="filter-count">We have found <strong style="color: red;">0</strong> records!</p>
+				<div id="record-box">
+					<script src="js/record.js"></script>
+				</div>
+				<!-- <div class="species">
+					<img src="https://img.icons8.com/plasticine/100/000000/frog-face.png"/><p>Amphibians</p>
+				</div>
+				<div class="species">
+					<img src="https://img.icons8.com/plasticine/100/000000/horse.png"/><p>Mammals</p>
+				</div>
+				<div class="species">
+					<img src="https://img.icons8.com/plasticine/100/000000/bird.png"/><p>Birds</p>
+				</div> -->
+			</div>
+			<div id="map-container">
+				<script src="js/record.js"></script>
+			</div>
+		</section>
+		<hr>
+
+		<footer class="footer">
+			<section class="footer-columns">
+				<article class="footer-column">
+					<h6>Wild Queensland</h6>
+					<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+				</article>
+				<nav class="footer-column">
+					<h6>RECENT COMMENTS</h6>
+					<ul>
+						<li><a href="KanasLake.html">“A journey full of Mongolian culture”</a></li>
+						<li><a href="KanasLake.html">“An unforgettable experience in a lifetime”</a></li>
 					</ul>
 				</nav>
-			</article>	
-		</section>   
-        <section class="container">
-			<header class="banner-title"> 
-				<h1>Wild Queensland</h1>
-				<h2><span>THE BEAUTY</span> that does not belong to<span> THE REAL WORLD</span></h2>
-			</header>
-        </section>
-	</header>
-	<hr>
-	<section class="mapFunction">
-		<div class="search">
-			<img src="images/frogs-demo.jpeg" alt="frogs-demo" class="frog">
-			<div class="search-bar">
-				<input type="text" name="Animal name" placeholder="Filter by text" class="flex">
-				<input type="submit" value="search">
-			</div>
-			<div class="species">
-				<img src="https://img.icons8.com/plasticine/100/000000/frog-face.png"/><p>Amphibians</p>
-			</div>
-			<div class="species">
-				<img src="https://img.icons8.com/plasticine/100/000000/horse.png"/><p>Mammals</p>
-			</div>
-			<div class="species">
-				<img src="https://img.icons8.com/plasticine/100/000000/bird.png"/><p>Birds</p>
-			</div>
-		</div>
-		<div id="map">
-
-		</div>
-	</section>
-	<script>
-		var map = L.map('map').setView([-22.889674, 135.299873], 5);
-
-		L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0', {
-			attribution: 'https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=BGS06YJ4dRyA4HeqYgI0',
-			maxZoom: 18,
-			id: 'mapbox/streets-v11',
-			tileSize: 512,
-			zoomOffset: -1,
-			accessToken: 'your.mapbox.access.token'
-		}).addTo(map)
-
-		L.Control.Watermark = L.Control.extend({
-			onAdd: function(map) {
-				var img = L.DomUtil.create('img');
-				img.src = 'images/logo.png';
-				img.style.width = '110px';
-				return img;
-			},
-			onRemove: function(map) {},
-		});
-
-		L.control.Watermark = function(opts) {
-			return new L.Control.Watermark(opts);
-		}
-
-		L.control.Watermark().addTo(map);
-
-		// var marker1 = L.marker([-22.889674, 144.299873]).addTo(map);
-		//  	marker2 = L.marker([-19.779545, 147.595547]).addTo(map);
-		//  	marker3 = L.marker([-22.779545, 149.595547]).addTo(map);
-		//  	marker4 = L.marker([-28.779545, 120.595547]).addTo(map);
-		//  	marker5 = L.marker([-24.779545, 125.595547]).addTo(map);
-		//  	marker6 = L.marker([-14.779545, 125.595547]).addTo(map);
+				<article class="footer-column">
+					<h6>CONTACT US</h6>
+					<p>If you have any issues, please contact us</p>
+					<article class="footer-grid-address">
+						<p>Tel.+00 8888888</p>
+						<p>Email:team01@uqxxx.edu.au</p>
+					</a>
+				</article>			
+			</section>
+		</footer>
 		
-		// marker1.bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-
-		var Frogs = L.Icon.extend({
-			options: {
-				iconSize: [45, 45],
-			}
-		});
-
-		var frogIcon = new Frogs({iconUrl: 'images/frog.png'});
-
-		L.icon = function (options) {
-			return new L.Icon(options);
-		};
-
-		L.marker([-22.889674, 144.299873], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-		L.marker([-19.779545, 147.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-		L.marker([-22.779545, 149.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-		L.marker([-28.779545, 120.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-		L.marker([-24.779545, 125.595547], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-		L.marker([-14.779554, 125.595797], {icon: frogIcon}).addTo(map).bindPopup("<img src='images/frog.png'><h2>Kingdom Name: XXX</h2><br><h2>Class Name: XXX</h2><br><h2>Family Name: XXX</h2><br><h2>Family Commonname: XXX</h2><br><h2>Family Rank: XXX</h2>");
-
-		// L.marker([-22.889674, 144.299873], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-
-		// L.marker([-19.779545, 147.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-
-		// L.marker([-22.779545, 149.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-
-		// L.marker([-28.779545, 120.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-
-		// L.marker([-24.779545, 125.595547], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-
-		// L.marker([-14.779554, 125.595797], {icon: frogIcon}).addTo(map).on('click', function(e){
-    	// 	map.setView(e.latlng, 10);
-		// });
-		
-		// set flags to the map to help user mark the location
-		var Flags = L.Icon.extend({
-			options: {
-				iconSize: [45, 45],
-			}
-		});
-
-		var flagIcon = new Flags({iconUrl: 'images/flag.png'});
-
-		map.on('click', function(e) {
-    		var marker = new L.marker(e.latlng, {icon: flagIcon}).addTo(map);
-		});
-		
-		// var popup = L.popup()
-		// .setLatLng([-25.833, 136.583])
-		// .setContent("I am a standalone popup.")
-		// .openOn(map);
-
-	</script>
-	<hr>
-
-    <footer class="footer">
-		<section class="footer-columns">
-			<article class="footer-column">
-				<h6>Wild Queensland</h6>
-				<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
-			</article>
-			<nav class="footer-column">
-				<h6>RECENT COMMENTS</h6>
-				<ul>
-					<li><a href="KanasLake.html">“A journey full of Mongolian culture”</a></li>
-					<li><a href="KanasLake.html">“An unforgettable experience in a lifetime”</a></li>
-				</ul>
-			</nav>
-			<article class="footer-column">
-				<h6>CONTACT US</h6>
-				<p>If you have any issues, please contact us</p>
-				<article class="footer-grid-address">
-					<p>Tel.+00 8888888</p>
-					<p>Email:team01@uqxxx.edu.au</p>
-				</a>
-			</article>			
-		</section>
-	</footer>
-
-	<script src="js/script.js"></script>
-	
-</body>
+	</body>
 </html>
 

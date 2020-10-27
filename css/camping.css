@@ -166,7 +166,7 @@ header #front:hover {
     font-size: 14px;
 }
 #forest h1 {
-    color: rgb(39, 189, 39);
+    color: forestgreen;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -178,7 +178,7 @@ header #front:hover {
     animation: 2s change-forest forwards;
 }
 
-@keyframes change-forest {
+/* @keyframes change-forest {
     to {
         background-color:rgb(126, 70, 15);
         box-shadow: 5px 5px 20px #4b4a4a;
@@ -187,7 +187,7 @@ header #front:hover {
         padding-left: 8px;
         padding-right: 5px;
     }
-}
+} */
 
 #lake img {
     margin-top: 50px;
@@ -226,16 +226,16 @@ header #front:hover {
     animation: 2s change-lake forwards;
 }
 
-@keyframes change-lake {
+/* @keyframes change-lake {
     to {
-        background-color: rgb(5, 90, 5);
+        background-color: rgb(162, 167, 162);
         box-shadow: 5px 5px 20px #4b4a4a;
         color:cornsilk;
         border-radius: 6px;
         padding-left: 8px;
         padding-right: 5px;
     }
-}
+} */
 
 #beach img {
     margin-top: 50px;
@@ -274,7 +274,7 @@ header #front:hover {
     animation: 2s change-beach forwards;
 }
 
-@keyframes change-beach {
+/* @keyframes change-beach {
     to {
         background-color: rgb(7, 7, 107);
         box-shadow: 5px 5px 20px #4b4a4a;
@@ -283,7 +283,7 @@ header #front:hover {
         padding-left: 8px;
         padding-right: 5px;
     }
-}
+} */
 
 #mountain img {
     margin-top: 50px;
@@ -322,7 +322,7 @@ header #front:hover {
     animation: 2s change-mountain forwards;
 }
 
-@keyframes change-mountain {
+/* @keyframes change-mountain {
     to {
         background-color: rgb(182, 148, 36);
         box-shadow: 5px 5px 20px #4b4a4a;
@@ -331,7 +331,7 @@ header #front:hover {
         padding-left: 8px;
         padding-right: 5px;
     }
-}
+} */
 
 #desert img {
     margin-top: 50px;
@@ -371,7 +371,7 @@ header #front:hover {
     animation: 2s change-desert forwards;
 }
 
-@keyframes change-desert {
+/* @keyframes change-desert {
     to {
         background-color:rgb(70, 122, 122);
         box-shadow: 5px 5px 20px #4b4a4a;
@@ -380,7 +380,7 @@ header #front:hover {
         padding-left: 8px;
         padding-right: 5px;
     }
-}
+} */
 
 .Separator {
     clear: both;
