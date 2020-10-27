@@ -125,8 +125,32 @@ body{
 	height: 400px;
 	width: 620px;
 	border-radius: 5px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.5)
-	
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+	cursor: zoom-in;
+}
+.cover:hover {
+	animation: 2s change forwards;
+}
+@keyframes change {
+    to {
+        box-shadow:0 5px 20px rgba(27, 168, 224, 0.993);
+    }
+}
+.wrapper{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999999999;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: rgba(34, 33, 33, 0.699);
+	background-size: 60%;
+}
+.wrapper:hover{
+	cursor: zoom-out;
 }
 .species{
 	display: flex;
@@ -162,6 +186,7 @@ body{
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 15px;
 	font-weight: bold;
+	cursor: cell;
 }
 /* #search-title {
 	text-align: center;
@@ -375,3 +400,5 @@ body{
     padding-right: 150px;
     text-align: justify;
 }
+
+
