@@ -210,7 +210,7 @@ function iterateRecords(data) {
                 (".search-button").unbind('click').on('click',function(){})
             }
 
-            // case 8 - Dugongidae
+            // case 8 -Dugongidae
             if(FamilyRank == 990300) {
                 var dugongidaeIcon = new animalImages({iconUrl: 'images/animals/sea cow.png'});
                 var marker36 = L.marker([-23.23781, 154.22387], {icon: dugongidaeIcon}).addTo(map).bindPopup("<img src='images/990300.jpg' alt='sea cow' style='height: 150px;'>"+"<br>"+"Kingdom name: "+KingdomName+"<br>"+"Family name: "+FamilyName+"<br>"+"Family common name: "+FamilyCommonName+"<br>"+"Family Rank: "+FamilyRank);

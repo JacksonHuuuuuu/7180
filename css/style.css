@@ -1,10 +1,10 @@
 body{
 	margin:0;
 	font-family: 'Raleway', sans-serif;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 }
 .header{
-	background-color: rgb(133, 102, 0);
+	background: linear-gradient(-90deg, #008b5f 0%, #2c3c83 100%);
 	height: 4em;
 	margin: 0px;
 }
@@ -30,7 +30,7 @@ body{
 }
 .top-nav{
 	float: right;
-	width: 40%;
+	width: 50%;
 	margin-top: 0.6em;
 }
 .top-nav ul{
@@ -53,7 +53,7 @@ body{
 	padding:10px;
 }
 .top-nav ul li a:hover{
-	background: rgb(12, 117, 121);
+	background: rgba(0, 0, 0, 0.349);
 }
 
 .container{
@@ -65,9 +65,8 @@ body{
 }
 
 .banner-title{
-	color: rgb(5, 215, 252);
+	color: rgb(5, 244, 252);
 	padding: 19em 0 0 0;
-	filter: brightness();
 }
 .banner-title h1{
 	padding-left: 1em;
@@ -81,7 +80,7 @@ body{
 	width: 75%;
 }
 .banner-title h2 span {
-  color:rgb(5, 215, 252);
+  color:rgb(5, 244, 252);
   font-weight: 300;
 }
 .AboutResort{
@@ -90,13 +89,7 @@ body{
 	height: 1200px;
 	overflow:hidden;
 }
-.AboutUs{
-	background: rgb(0, 170, 255);
-	width:100%;
-	height: 360px;
-	overflow:hidden;
-	margin-bottom: 5em;	
-}
+
 .developer-image{
 	float:left;
 	width:20%;
@@ -149,9 +142,11 @@ body{
 	background-color: rgba(34, 33, 33, 0.699);
 	background-size: 60%;
 }
+
 .wrapper:hover{
 	cursor: zoom-out;
 }
+
 .species{
 	display: flex;
 	flex-direction: row;
@@ -214,78 +209,96 @@ body{
 	margin: 3px;
 }
 #record-box {
-	border: 5px;
-	border-style: groove;
-	border-color: black;
+	border-radius: 5px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
 	height: 500px;
-	width: 650px;
-	margin-left: 10px;
-	margin-right: 10px;
+	width: 630px;
 	overflow-y: scroll;
+	padding: 5px;
+	margin: 5px auto;
 }
 .record {
-	background-color: #724d15;
+	background: linear-gradient(-90deg, #3e5e6e 0%,#386b4a 100%);
 	color: whitesmoke;
 	padding: 1em;
-	margin-top: 1em;
+	margin-top: 5px;
 	margin-right: 0.2em;
 	margin-left: 0.2em;
-	border-color: rgb(155, 88, 11);
-	border-style: double;
-	border-width: 2px;
+	border: 1px solid gray;
+	border-radius: 5px;
 	
 }
 #map-container {
 	position: relative; 
 	width: 100%; 
-	height: 1100px; 
+	height: 1114px; 
 	margin: auto;
 	border-style: solid;
 	border-width: 2px;
 	margin-right: 20px;
 }
+
 .footer{
-	background: rgb(133, 102, 0);
+	background: linear-gradient(-90deg, #2c3c83 0%, #008b5f 100%);
 	width:100%;
 	height: 280px;
 	overflow:hidden;
 }
 
 .footer-column, .footer-grid-address {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .footer-column{
 	float:left;
-	width:31%;
 	height:100%;
-	margin-right:2%;
+	margin-top: 20px;
 }
+
+#column-1 {
+	margin-left: 300px;
+}
+
+
+#column-3 {
+	float: right;
+	margin-right: 300px;
+}
+
 .footer-column h6{
 	font-size: 1.5em;
 	color: white;
 	margin-bottom: 20px;
-	margin-left: 30px;
+
 }
 .footer-column p{
-	font-size: 0.9em;
+	font-size: 1em;
 	color:white;
 	line-height: 1.8em;
-	margin-left: 30px;
 }
-.footer-column ul li a{
+
+.footer-column ul li{
 	text-decoration: none;
 	display:block;
 	padding:10px 0px;
-	border-bottom: 2px solid black;
+	/* border-bottom: 2px solid black; */
 	font-size: 0.9em;
 	color:white;
 	transition: 0.5s ease;
 }
-.footer-column ul li a:hover{
-	color:green;
+
+.footer-column ul {
+	list-style: none;
+	padding: 0;
 }
+
+
+.footer-columns {
+	width: 100%;
+}
+
 /*equipment*/ 
+
 .top_img {
     width: 100%;
     height: 400px;
@@ -303,13 +316,14 @@ body{
     font-size: 48px;
     color: white;
     bottom: 1em;
-    left: 2em;
+	left: 2em;
 }
 
 .beginner, .intermediate, .advanced {
     border-bottom: none !important;
     width: 100%;
-    height: 600px;
+	height: 600px;
+	overflow: hidden;
 }
 
 .img {
@@ -332,7 +346,6 @@ body{
     padding-top: 80px;
     padding-left: 1000px;
     text-align: justify;
-    
 }
 
 .beginner ul,.intermediate ul,.advanced ul {
@@ -400,5 +413,4 @@ body{
     padding-right: 150px;
     text-align: justify;
 }
-
 
